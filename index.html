@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store Management System</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="imgs/logo.webp">
+</head>
+<body>
+    
+<div class="crud">
+    <div class="head">
+        <h3>Product Management System</h3>
+    </div>
+
+    <div class="inputs">
+        <input type="text" placeholder="title" id="title">
+        <div class="price">
+            <input type="number" placeholder="price" id="price" onkeyup="getTotal()">
+            <input type="number" placeholder="Tax" id="Tax" onkeyup="getTotal()">
+            <input type="number" placeholder="ads" id="ads" onkeyup="getTotal()">
+            <input type="number" placeholder="discount" id="discount" onkeyup="getTotal()">
+            <small id="total"></small>
+        </div>
+        <input type="number" placeholder="count" id="count">
+        <input type="text" placeholder="cateogry" id="cateogry">
+        <button id="submit">Create</button>
+    </div>
+
+
+
+    <div class="outputs">
+        <div class="searchBlock">
+            <input type="text" placeholder="search" id="search" onkeyup="searchData(this.value)">
+            <div class="btnsearch">
+                <button onclick="getSearchMode(this.id)" id="searchTitle">Search By Title</button>
+                <button onclick="getSearchMode(this.id)" id="searchCateogry">Search By Cateogry</button>
+            </div>
+        </div>
+
+        <!--deleta all button-->
+        <div id="deleteAll">
+
+        </div>
+        <!--table to show Data-->
+        <table>
+            <tr>
+                <th>id</th>
+                <th>title</th>
+                <th>price</th>
+                <th>taxes</th>
+                <th>ads</th>
+                <th>discount</th>
+                <th>total</th>
+                <th>cateogries</th>
+                <th>update</th>
+                <th>delete</th>
+            </tr>
+           <tbody id="tbody">
+            
+           </tbody>
+        </table>
+    </div> <!--outputs-->
+</div>
+
+
+
+
+
+    <!--scripts-->
+    <script src="js/main.js"></script>
+</body>
+</html>
